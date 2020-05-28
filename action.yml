@@ -1,15 +1,15 @@
-name: 'Helm Lint'
-description: 'Run helm linting for the current PR'
+name: "Helmfile Lint"
+description: "Run helmfile linting for the current PR"
 inputs:
-  chart_directory:
-    description: 'Path to the chart directory'
+  helmfile_directory:
+    description: "Path to the directory where the helmfile is located"
     required: true
-  chart_name:
-    description: 'Name of the chart'
+  stage:
+    description: "staging or production"
     required: true
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
-    - ${{ inputs.chart_directory }}
-    - ${{ inputs.chart_name }}
+    - ${{ inputs.helmfile_directory }}
+    - ${{ inputs.stage }}
