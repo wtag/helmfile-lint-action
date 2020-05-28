@@ -1,22 +1,22 @@
-# Helm Lint Action
+# Helmfile Lint Action
 
-This action lints a helm chart.
+This action lints a Helmfile deployment.
 
 ## Inputs
 
-### `chart_directory`
+### `helmfile_directory`
 
-**Required** The path to the chart directory which should be linted.
+**Required** The path to the directory where the helmfile is located
 
-### `chart_name`
+### `stage`
 
-**Required** The name of the chart which should be linted.
+**Required** The environment that we would like to lint (staging or production)
 
 ## Example usage
 
 ```yaml
-uses: wtag/helm-lint-action@master
+uses: wtag/helmfile-lint-action@master
 with:
-  chart_directory: deployment/chart
-  chart_name: pg-backup
+  helmfile_directory: deployment
+  stage: staging
 ```
