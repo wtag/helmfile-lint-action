@@ -7,4 +7,4 @@ export STAGE=${2}
 
 cd ${HELMFILE_DIRECTORY}
 helmfile template
-helmfile lint
+helmfile lint  --args --strict
