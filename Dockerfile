@@ -1,4 +1,4 @@
-FROM dtzar/helm-kubectl:2.16.1
+FROM dtzar/helm-kubectl:2.17.0
 
 ENV HELM_HOME=/root/.helm
 ENV HELMFILE_VERSION=v0.116.0
