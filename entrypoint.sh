@@ -21,7 +21,7 @@ helm plugin install https://github.com/chartmuseum/helm-push
 # Import a (not-so-)secret key for SOPS to encrypt our dummy secret.yaml files
 gpg --import /sops_functional_tests_key.asc
 
-# Contained in the file above
+# This key is the fingerprint of one of the public keys contained in the file above
 export GPG_KEY_FINGERPRINT=FBC7B9E2A4F9289AC0C1D4843D16CEE4A27381B4
 
 cd ${HELMFILE_DIRECTORY}
