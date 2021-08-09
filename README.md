@@ -47,7 +47,6 @@ This will allow us to be able to **run `helmfile template` and `helmfile lint` w
 ```yaml
 uses: wtag/helmfile-lint-action@master
 with:
-  helmfile_directory: deployment
   stage: staging
 ```
 
