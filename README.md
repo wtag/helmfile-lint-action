@@ -34,13 +34,13 @@ This will allow us to be able to **run `helmfile template` and `helmfile lint` w
 
 ## Inputs
 
-### `helmfile_directory`
-
-**Required** The path to the directory where the helmfile is located
-
 ### `stage`
 
 **Required** The environment that we would like to lint (staging or production)
+
+### `helmfile_directory`
+
+**Required (default: "deployment")** The path to the directory where the helmfile is located
 
 ## Example usage
 
@@ -49,4 +49,18 @@ uses: wtag/helmfile-lint-action@master
 with:
   helmfile_directory: deployment
   stage: staging
+```
+
+## How to use this action locally?
+
+```shell
+# Build the docker image
+docker build -t helmfile-lint-action-local .
+
+# Set your variables accordingly
+export HELMFILE_DIRECTORY=$PWD/../meta/deployment
+export STAGE=staging
+
+# Run the GitHub action locally 🎉
+docker run -v $HELMFILE_DIRECTORY:/app helmfile-lint-action-local /app "${STAGE}"
 ```

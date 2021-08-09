@@ -1,11 +1,12 @@
 name: "Helmfile Lint"
 description: "Run helmfile linting for the current PR"
 inputs:
-  helmfile_directory:
-    description: "Path to the directory where the helmfile is located"
-    required: true
   stage:
     description: "staging or production"
+    required: true
+  helmfile_directory:
+    description: "Path to the directory where the helmfile is located"
+    default: "deployment"
     required: true
 runs:
   using: "docker"
