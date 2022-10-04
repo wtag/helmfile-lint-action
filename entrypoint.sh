@@ -10,7 +10,7 @@ export REFERENCE=helmfile-ci-linting
 
 # Install helm plugins - cannot be done in the Dockerfile
 rm -rf  ~/.local/share/helm/plugins/
-helm plugin install https://github.com/jkroepke/helm-secrets
+helm plugin install https://github.com/futuresimple/helm-secrets
 helm plugin install https://github.com/databus23/helm-diff
 helm plugin install https://github.com/chartmuseum/helm-push
 
