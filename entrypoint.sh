@@ -7,6 +7,7 @@ export STAGE=${2}
 
 # Required by some applications, but not relevant for CI
 export REFERENCE=helmfile-ci-linting
+export NAMESPACE=test
 
 # Install helm plugins - cannot be done in the Dockerfile
 rm -rf  ~/.local/share/helm/plugins/
