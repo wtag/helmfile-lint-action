@@ -11,7 +11,7 @@ export NAMESPACE=test
 
 # Install helm plugins - cannot be done in the Dockerfile
 rm -rf  ~/.local/share/helm/plugins/
-helm plugin install https://github.com/jkroepke/helm-secrets
+helm plugin install https://github.com/jkroepke/helm-secrets --version v3.15.0 #use stable version
 helm plugin install https://github.com/databus23/helm-diff
 helm plugin install https://github.com/chartmuseum/helm-push
 
