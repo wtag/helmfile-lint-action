@@ -4,6 +4,7 @@ on:
     push:
         branches:
             - master
+            - OPS-3234-Create-Pipeline-for-new-release
 
 jobs:
   release:
