@@ -9,6 +9,9 @@ on:
 jobs:
   release:
     runs-on: self-hosted
+    env:  
+      GH_PACKAGES_ACCESS_TOKEN: ${{ secrets.GH_PACKAGES_ACCESS_TOKEN }}
+      GH_PACKAGES_ACCESS_TOKEN_RW: ${{ secrets.GH_PACKAGES_ACCESS_TOKEN_RW }}
 
     steps:
       - name: Checkout code
