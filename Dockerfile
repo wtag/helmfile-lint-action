@@ -1,7 +1,7 @@
-FROM dtzar/helm-kubectl:3.9.4
+FROM dtzar/helm-kubectl:3.18.6
 
 ENV HELM_HOME=/root/.helm
-ENV HELMFILE_VERSION=1.1.3
+ENV HELMFILE_VERSION=1.1.6
 ENV SOPS_VERSION=v3.7.3
 
 RUN apk add --update-cache gnupg sed
