@@ -10,8 +10,8 @@ export REFERENCE=helmfile-ci-linting
 
 # Install helm plugins - cannot be done in the Dockerfile
 rm -rf  ~/.local/share/helm/plugins/
-helm plugin install https://github.com/jkroepke/helm-secrets --version 4.6.3 #use stable version
-helm plugin install https://github.com/databus23/helm-diff --version 3.11.0
+helm plugin install https://github.com/jkroepke/helm-secrets --version 4.6.1 #use stable version
+helm plugin install https://github.com/databus23/helm-diff --version 3.9.7
 helm plugin install https://github.com/chartmuseum/helm-push
 
 ###########################################################
